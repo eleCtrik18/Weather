@@ -5,10 +5,12 @@ city = input('Enter your city : ')
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=87778270f2de329e6f7d1f021bdead58&units=metric'.format(city)
 
+#Passing an http request to get data
 res = requests.get(url)
 
 data = res.json()
 
+#Retriving data from json
 temp = data['main']['temp']
 wind_speed = data['wind']['speed']
 
